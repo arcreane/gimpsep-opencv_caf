@@ -1,0 +1,2 @@
+﻿  Source.cpp
+C:\Users\franc\source\repos\ProjectOpenCV_Final_CAF\ProjectOpenCV_Final_CAF\Source.cpp(3,10): fatal error C1083: Impossible d'ouvrir le fichier include : 'opencv2/opencv.hpp' : No such file or directory
