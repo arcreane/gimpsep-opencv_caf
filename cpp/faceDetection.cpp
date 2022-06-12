@@ -8,11 +8,11 @@
 using namespace std;
 using namespace cv;
 
-int faceDetection() {
+int faceDetection(String file) {
 	CascadeClassifier f_cascade;
 	Mat img;
 	Mat img_gray;
-	img = imread("Ressources/brossolet_pic.jpg", COLOR_BGR2GRAY);
+	img = imread(file);
 	
 
 	f_cascade.load("HaarCascade/haarcascade_frontalface_alt.xml");
@@ -26,6 +26,11 @@ int faceDetection() {
 		Point center(faces[i].x + faces[i].width / 2, faces[i].y + faces[i].height / 2);
 		ellipse(img, center, Size(faces[i].width / 2, faces[i].height / 2), 0, 0, 360, Scalar(255, 0, 255), 4, 8, 0);
 	}
+
+	namedWindow("Detected Face", 0);
+	
+	resizeWindow("Detected Face", img.size().width / 3, img.size().height / 3);
+	
 	imshow("Detected Face", img);
 
 	waitKey(0);

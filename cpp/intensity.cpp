@@ -7,9 +7,9 @@ using namespace std;
 
 
 
-int intensity() {
+int intensity(String file) {
     int morph_size = 2;
-    Mat img = imread("Ressources/brossolet_pic.jpg");
+    Mat img = imread(file);
 
     Mat new_image = Mat::zeros(img.size(), img.type());
     double alpha = 1.0;
@@ -24,8 +24,15 @@ int intensity() {
             }
         }
     }
-    imshow("Original Image", img);
-    imshow("New Image", new_image);
+    namedWindow("Original image", 0);
+    namedWindow("New image", 0);
+    resizeWindow("Original image", img.size().width/3, img.size().height/3);
+    resizeWindow("New image", img.size().width / 3, img.size().height / 3);
+
+    imshow("Original image", img);
+    imshow("New image", new_image);
+    
+    imwrite("Results/resultIntensity.jpg", new_image);
     waitKey();
     return 0;
 }

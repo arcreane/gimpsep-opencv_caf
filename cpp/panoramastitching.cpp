@@ -48,10 +48,11 @@ int panoramastitching() {
 
     // Store a new image stitched from the given
     //set of images as "result.jpg"
-    imwrite("Results/result.jpg", pano);
+    imwrite("Results/resultPanorama.jpg", pano);
 
     // Show the result
     imshow("Result", pano);
+
 
     waitKey(0);
     return 0;

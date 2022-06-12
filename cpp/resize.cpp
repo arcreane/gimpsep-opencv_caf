@@ -5,8 +5,8 @@ using namespace cv;
 using namespace std;
 
 
-int resize(int width, int height) {
-    Mat img = imread("Ressources/brossolet_pic.jpg");
+int resizeFunc(int width, int height, String file) {
+    Mat img = imread(file);
     //imshow("Original image", img);
     Mat resized;
 

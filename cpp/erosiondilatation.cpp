@@ -5,10 +5,10 @@ using namespace cv;
 using namespace std;
 
 
-int erosiondilatation() {
+int erosiondilatation(String file) {
     int choice;
     int morph_size = 2;
-    Mat img = imread("Ressources/brossolet_pic.jpg");
+    Mat img = imread(file);
     Mat erosion, dilatation;
     Mat element = getStructuringElement(
         MORPH_RECT, Size(2 * morph_size + 1,
@@ -20,12 +20,20 @@ int erosiondilatation() {
     do {
         if (choice == 1) {
             erode(img, erosion, element, Point(-1, -1), 1);
-            imshow("erosion", erosion);
+
+            namedWindow("Erosion", 0);
+            resizeWindow("Erosion", img.size().width / 3, img.size().height / 3);
+            imshow("Erosion", erosion);
+            imwrite("Results/resultErosion.jpg", erosion);
             waitKey();
         }
         else {
             dilate(img, dilatation, element, Point(-1, -1), 1);
-            imshow("dilatation", dilatation);
+
+            namedWindow("Dilatation", 0);
+            resizeWindow("Dilatation", img.size().width / 3, img.size().height / 3);
+            imshow("Dilatation", dilatation);
+            imwrite("Results/resultDilatation.jpg", dilatation);
             waitKey();
         }
     } while (choice != 1 && choice != 2);
