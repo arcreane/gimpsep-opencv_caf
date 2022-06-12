@@ -5,4 +5,4 @@ using namespace cv;
 using namespace std;
 
 
-int resize(int width, int height);
+int resizeFunc(int width, int height, String img);

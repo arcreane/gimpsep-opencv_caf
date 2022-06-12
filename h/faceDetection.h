@@ -4,4 +4,4 @@
 using namespace cv;
 using namespace std;
 
-int faceDetection();
+int faceDetection(String file);

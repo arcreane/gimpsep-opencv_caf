@@ -6,4 +6,4 @@
 #include <stdio.h>
 using namespace cv;
 
-int cannyEdgeDetection();
+int cannyEdgeDetection(String file);

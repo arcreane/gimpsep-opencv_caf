@@ -4,4 +4,4 @@
 using namespace cv;
 using namespace std;
 
-int intensity();
+int intensity(String file);

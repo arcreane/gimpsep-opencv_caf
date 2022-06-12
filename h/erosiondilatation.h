@@ -2,6 +2,5 @@
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgcodecs.hpp>
 using namespace cv;
-using namespace std;
 
-int erosiondilatation();
+int erosiondilatation(String file);
