@@ -134,6 +134,7 @@
   <ItemGroup>
     <ClCompile Include="cpp\cannyedgedetection.cpp" />
     <ClCompile Include="cpp\erosiondilatation.cpp" />
+    <ClCompile Include="cpp\faceDetection.cpp" />
     <ClCompile Include="cpp\intensity.cpp" />
     <ClCompile Include="cpp\main.cpp" />
     <ClCompile Include="cpp\panoramastitching.cpp" />
@@ -142,6 +143,7 @@
   <ItemGroup>
     <ClInclude Include="h\cannyedgedetection.h" />
     <ClInclude Include="h\erosiondilatation.h" />
+    <ClInclude Include="h\faceDetection.h" />
     <ClInclude Include="h\intensity.h" />
     <ClInclude Include="h\panoramastitching.h" />
     <ClInclude Include="h\resize.h" />
@@ -157,6 +159,9 @@
     <Image Include="Ressources\8.jpg" />
     <Image Include="Ressources\A_black_image.jpg" />
     <Image Include="Ressources\brossolet_pic.jpg" />
+    <Image Include="Ressources\femme.jpg" />
+    <Image Include="Ressources\homme.jpg" />
+    <Image Include="result.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
